@@ -20,3 +20,15 @@ Starter react-ts project
 `yarn test`
 `yarn lint:fix`
 `yarn build` `npx serve dist`
+
+## test usages with vs code
+
+solution #1 -> watch mode with test explorer view
+
+- install extension vitest
+- use test explorer view
+
+solution #2 -> debug mode with command
+
+- Open new `Javascript Debug Terminal`
+- Run `yarn test`
