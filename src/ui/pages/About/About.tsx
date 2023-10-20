@@ -1,22 +1,29 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
-import * as Api from './AboutApi';
+import {
+  selectAboutContent,
+  selectAboutIsFetching,
+} from '@/domain/about/about.selectors';
+import { getAboutContent } from '@/domain/about/actions/get-about-content.action';
+import { useAppDispatch, useAppSelector } from '@/ui/hook/store';
 
 export function About() {
-  const [aboutContent, setAboutContent] = useState('');
+  const dispatch = useAppDispatch();
 
-  // could be replaced by loader function in router
+  const isFetching = useAppSelector(selectAboutIsFetching);
+  const aboutContent = useAppSelector(selectAboutContent);
+
   useEffect(() => {
-    const fetchData = async () => {
-      const data = await Api.getAboutContent();
-      setAboutContent(data);
-    };
-    fetchData();
-  }, []);
+    dispatch(getAboutContent());
+  }, [dispatch]);
 
-  let content = 'Loading...⏲';
-  if (aboutContent) {
-    content = aboutContent;
+  let content = '--';
+  if (isFetching) {
+    content = 'Loading...⏲';
+  } else {
+    if (aboutContent) {
+      content = aboutContent;
+    }
   }
 
   return (
