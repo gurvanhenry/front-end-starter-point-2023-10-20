@@ -9,6 +9,7 @@ Starter react-ts project
 - eslint + prettier
 - .vscode/settings to lint on save
 - vitest
+- react-router
 
 ## main commands
 
