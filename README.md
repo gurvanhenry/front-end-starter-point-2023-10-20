@@ -7,9 +7,11 @@ Starter react-ts project
 - vite
 - react ts
 - eslint + prettier
-- .vscode/settings to lint on save
+  - .vscode/settings to lint on save
+  - rules to sort/group import
 - vitest
 - react-router
+- local import with @/...
 
 ## main commands
 
