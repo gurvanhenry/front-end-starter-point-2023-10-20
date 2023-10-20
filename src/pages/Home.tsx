@@ -5,8 +5,8 @@ import { Logo } from '@/components/Logo';
 export function Home() {
   return (
     <div>
+      <h3>Home page</h3>
       <Logo />
-      <p>Home page</p>
       <p>
         go to <Link to="/about">about</Link> page
       </p>
