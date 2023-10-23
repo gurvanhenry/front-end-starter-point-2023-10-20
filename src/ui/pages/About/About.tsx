@@ -6,6 +6,7 @@ import {
 } from '@/domain/about/about.selectors';
 import { getAboutContent } from '@/domain/about/actions/get-about-content.action';
 import { useAppDispatch, useAppSelector } from '@/ui/hook/store';
+import { translate } from '@/ui/i18n';
 
 export function About() {
   const dispatch = useAppDispatch();
@@ -28,7 +29,7 @@ export function About() {
 
   return (
     <div>
-      <h3>About page</h3>
+      <h3>{translate('about-page-title')}</h3>
       <p>this content is loaded from an api:</p>
       <p>----------------------</p>
       <p>{content}</p>

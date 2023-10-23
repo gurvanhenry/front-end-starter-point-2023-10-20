@@ -4,6 +4,8 @@
 
 Starter react-ts project
 
+- folder structure to extract business logic: ui -> domain <- data
+
 - vite
 - react ts
 - eslint + prettier
@@ -12,6 +14,8 @@ Starter react-ts project
 - vitest
 - react-router
 - local import with @/...
+- based on redux tool kit for store and actions
+- i18n with TS to check translation keys
 
 ## main commands
 
