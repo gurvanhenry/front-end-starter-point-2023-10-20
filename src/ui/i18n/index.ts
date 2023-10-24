@@ -6,7 +6,7 @@ i18next.init({
   lng: 'fr',
   fallbackLng: 'fr',
   defaultNS: 'ns1',
-  debug: true,
+  debug: false,
   resources: {
     fr: {
       ns1: frNs1,
