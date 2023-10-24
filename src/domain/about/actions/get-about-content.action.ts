@@ -1,10 +1,8 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
+import { createAppAsyncThunk } from '@/domain/store.thunk';
 
-import * as api from '@/data/api';
-
-export const getAboutContent = createAsyncThunk(
+export const getAboutContent = createAppAsyncThunk(
   'about/getAboutContent',
-  async () => {
-    return api.getAboutContent();
+  async (_, { extra: { apiAbout } }) => {
+    return apiAbout.getAboutContent();
   },
 );
